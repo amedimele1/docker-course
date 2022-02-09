@@ -1,0 +1,18 @@
+ yum update -y
+ cd /opt
+ yum install wget vim tree nano unzip git-all -y
+ yum install java-11-openjdk-devel java-1.8.0-openjdk-devel -y
+ java -version
+ git --version
+ wget https://dlcdn.apache.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.zip  # version can change anytime
+ unzip apache-maven-3.8.4-bin.zip
+ ls -altr
+ rm -rf apache-maven-3.8.4-bin.zip
+ mv apache-maven-3.8.4/ maven
+ ls -altr
+ vi /etc/profile   # (set environmental variable for all the users) but use vi ~/.bash_profile to set env variable for a specific user)
+    export M2_HOME=/opt/maven
+    export PATH=$PATH:$M2_HOME/bin
+ source /etc/profile
+ mvn
+ mvn --version

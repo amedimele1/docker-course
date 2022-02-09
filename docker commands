@@ -1,0 +1,6 @@
+docker info  
+docker --version 
+DOCKER COMMANDS RELATED TO IMAGES
+ # docker images 
+ # docker rmi <image_id> or <image_name>
+ 
